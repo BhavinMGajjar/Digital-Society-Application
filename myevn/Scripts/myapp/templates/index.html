@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+
+   </head>
+   <body>
+     <div class="banner_section layout_padding">
+            <div id="my_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <h3 class="banner_taital" style="font-size: 50px; color:grey;">Welcome to Digital Society Management Application</h3>
+                           </div>
+                           <div class="col-md-6">
+                              <div><img src="{% static 'images/img-1.png' %}" class="image_1"></div>
+                           </div>
+                        </div>
+                        
+                     </div>
+                  </div>
+                  
+            </div>
+         </div>
+      <!-- category section end -->
+      <!-- beauty product section start -->
+     
+    
+   </body>
+</html>
+
+{% endblock %}

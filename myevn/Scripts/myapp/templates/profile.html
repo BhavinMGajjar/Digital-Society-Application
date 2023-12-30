@@ -1,0 +1,65 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+
+   </head>
+   <body>
+     <div class="banner_section layout_padding">
+            <div id="my_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="row">
+                           <form method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
+                  {% csrf_token %}
+                 <h1 class="touch_taital" style="color: white;">My Profile</h1>
+
+                  <div class="bor8 m-b-20 how-pos4-parent">
+                     <input class="email-bt" type="text" name="fname" placeholder="Your FirstName" value="{{user.fname}}">
+                     
+                  </div>
+                  <div class="bor8 m-b-20 how-pos4-parent">
+                     <input class="email-bt" type="text" name="lname" placeholder="Your last name" value="{{user.lname}}">
+                  
+                  </div>
+                  <div class="bor8 m-b-20 how-pos4-parent">
+                     <input class="email-bt" type="text" name="mobile" placeholder="Your mobile number" value="{{user.mobile}}">
+                     
+                  </div>
+                  <div class="bor8 m-b-20 how-pos4-parent">
+                     <input class="email-bt" type="text" name="email" value="{{user.email}}" readonly>
+                     
+                  </div>
+
+                  
+                  <div class="bor8 m-b-30">
+                     <img src="{{user.profile_picture.url}}" width="100px" height="100px">
+                  </div>
+
+                  <div class="bor8 m-b-20 how-pos4-parent">
+                     <input class="email-bt" type="file" name="profile_picture">
+                     
+                  </div>
+
+                  <button class="btn btn-primary" type="submit">
+                     Update profile
+                  </button>
+               </form>
+                        </div>
+                        
+                     </div>
+                  </div>
+                  
+            </div>
+         </div>
+      <!-- category section end -->
+      <!-- beauty product section start -->
+     
+    
+   </body>
+</html>
+
+{% endblock %}
